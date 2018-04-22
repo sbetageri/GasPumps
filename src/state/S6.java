@@ -7,4 +7,11 @@ public class S6 extends State {
     public S6(MetaModel model, OutputProcessor op) {
         super(model, op);
     }
+
+    @Override
+    public void Receipt() {
+        op.printReceipt();
+        op.returnCash();
+        model.changeState(STATE_0);
+    }
 }

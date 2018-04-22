@@ -9,12 +9,14 @@ public class S0 extends State {
         super(model, op);
     }
 
+    @Override
     public void Activate() {
         op.storePrices();
     }
 
+    @Override
     public void Start() {
-        op.m = 1;
+        model.m = 1;
         op.payMsg();
         op.initializeData();
         model.changeState(State.STATE_1);

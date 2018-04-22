@@ -27,8 +27,6 @@ public class OutputProcessor {
     AFGasPump gasPump;
     IDataStore dataStore;
 
-    public int m = 0;
-
     public OutputProcessor(AFGasPump concreteGasPump) {
         gasPump = concreteGasPump;
         dataStore = gasPump.getDataStoreObj();
@@ -98,7 +96,7 @@ public class OutputProcessor {
         setInitialValues.SetInitialValues();
     }
 
-    public void setPrice() {
+    public void setPrice(int g, int m) {
         setPrice = gasPump.getSetPriceObj();
         setPrice.SetPrice();
     }

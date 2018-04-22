@@ -22,6 +22,8 @@ public class MetaModel {
     State[] states = new State[8];
     State curState;
 
+    public int m = 0;
+
     public MetaModel(int gp) {
         AFGasPump gasPump;
         if (gp == 1) {
@@ -42,7 +44,7 @@ public class MetaModel {
         states[4] = new S4(this, op);
         states[5] = new S5(this, op);
         states[6] = new S6(this, op);
-        states[7] = new S7(this, op);
+        states[7] = new S8(this, op);
     }
 
     public void changeState(int newState) {

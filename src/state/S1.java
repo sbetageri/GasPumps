@@ -9,6 +9,7 @@ public class S1 extends State {
         super(model, op);
     }
 
+    @Override
     public void PayType(int t) {
         if (t == MetaModel.PAY_TYPE_CREDIT) {
             model.changeState(STATE_2);
@@ -16,7 +17,7 @@ public class S1 extends State {
         } else if (t == MetaModel.PAY_TYPE_CASH) {
             op.storeCash();
             op.displayMenu();
-            op.m = 0;
+            model.m = 0;
             model.changeState(STATE_3);
 
         } else if (t == MetaModel.PAY_TYPE_DEBIT) {
