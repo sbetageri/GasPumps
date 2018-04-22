@@ -1,8 +1,12 @@
 package factory;
 
+import data.IDataStore;
 import op.actions.*;
 
 public abstract class AFGasPump {
+
+    public abstract IDataStore getDataStoreObj();
+
     public abstract ICancelMsg getCancelMsgObj();
 
     public abstract IDisplayMenu getDisplayMenuObj();

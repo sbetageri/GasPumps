@@ -1,4 +1,4 @@
 package data;
 
-public interface IDataStore {
+public abstract class IDataStore {
 }

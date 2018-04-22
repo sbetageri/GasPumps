@@ -1,3 +1,5 @@
+import data.DataStore1;
+import data.IDataStore;
 import pumps.GasPump1;
 
 public class Driver {
@@ -10,7 +12,7 @@ public class Driver {
          */
         GasPump1 gasPump1 = new GasPump1();
         gasPump1.Activate(9, 9);
-
+        gasPump1.Start();
     }
 
 }

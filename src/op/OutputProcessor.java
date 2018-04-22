@@ -1,5 +1,6 @@
 package op;
 
+import data.IDataStore;
 import factory.AFGasPump;
 import op.actions.*;
 
@@ -23,10 +24,13 @@ public class OutputProcessor {
     IWrongPinMsg wrongPinMsg;
 
     AFGasPump gasPump;
+    IDataStore dataStore;
 
+    int m = 0;
 
     public OutputProcessor(AFGasPump concreteGasPump) {
         gasPump = concreteGasPump;
+        dataStore = gasPump.getDataStoreObj();
     }
 
     public void cancelMsg() {
@@ -37,5 +41,80 @@ public class OutputProcessor {
     public void storePrices() {
         storePrices = gasPump.getStorePricesObj();
         storePrices.StorePrices();
+    }
+
+    public void payMsg() {
+        payMsg = gasPump.getPayMsgObj();
+    }
+
+    public void displayMenu() {
+        displayMenu = gasPump.getDisplayMenuObj();
+        displayMenu.DisplayMenu();
+    }
+
+    public void enterPinMsg() {
+        enterPinMsg = gasPump.getEnterPinMsgObj();
+        enterPinMsg.EnterPinMsg();
+    }
+
+    public void gasPumpedMsg() {
+        gasPumpedMsg = gasPump.getGasPumpedMsgObj();
+        gasPumpedMsg.GasPumpedMsg();
+    }
+
+    public void initializeData() {
+        m = 1;
+        initializeData = gasPump.getInitializeDataObj();
+        initializeData.InitializeData(dataStore);
+    }
+
+    public void printReceipt() {
+        printReceipt = gasPump.getPrintReceiptObj();
+        printReceipt.PrintReceipt();
+    }
+
+    public void pumpGasUnit() {
+        pumpGasUnit = gasPump.getPumpGasUnitObj();
+        pumpGasUnit.PumpGasUnit();
+    }
+
+    public void readyMsg() {
+        readyMsg = gasPump.getReadyMsgObj();
+        readyMsg.ReadyMsg();
+    }
+
+    public void rejectMsg() {
+        rejectMsg = gasPump.getRejectMsgObj();
+        rejectMsg.RejectMsg();
+    }
+
+    public void returnCash() {
+        returnCash = gasPump.getReturnCashObj();
+        returnCash.ReturnCash();
+    }
+
+    public void setInitialValues() {
+        setInitialValues = gasPump.getSetInitialValuesObj();
+        setInitialValues.SetInitialValues();
+    }
+
+    public void setPrice() {
+        setPrice = gasPump.getSetPriceObj();
+        setPrice.SetPrice();
+    }
+
+    public void stopMsg() {
+        stopMsg = gasPump.getStopMsgObj();
+        stopMsg.StopMsg();
+    }
+
+    public void storeCash() {
+        storeCash = gasPump.getStoreCashObj();
+        storeCash.StoreCash();
+    }
+
+    public void wrongPinMsg() {
+        wrongPinMsg = gasPump.getWrongPinMsgObj();
+        wrongPinMsg.WrongPinMsg();
     }
 }

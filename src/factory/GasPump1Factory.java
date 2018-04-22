@@ -1,8 +1,15 @@
 package factory;
 
+import data.DataStore1;
+import data.IDataStore;
 import op.actions.*;
 
 public class GasPump1Factory extends AFGasPump {
+
+    @Override
+    public IDataStore getDataStoreObj() {
+        return DataStore1.getInstance();
+    }
 
     @Override
     public ICancelMsg getCancelMsgObj() {
@@ -11,77 +18,77 @@ public class GasPump1Factory extends AFGasPump {
 
     @Override
     public IDisplayMenu getDisplayMenuObj() {
-        return null;
+        return new DisplayMenu1();
     }
 
     @Override
     public IEnterPinMsg getEnterPinMsgObj() {
-        return null;
+        return new EnterPinMsg1();
     }
 
     @Override
     public IGasPumpedMsg getGasPumpedMsgObj() {
-        return null;
+        return new GasPumpedMsg1();
     }
 
     @Override
     public IInitializeData getInitializeDataObj() {
-        return null;
+        return new InitializeData1();
     }
 
     @Override
     public IPayMsg getPayMsgObj() {
-        return null;
+        return new PayMsg1();
     }
 
     @Override
     public IPrintReceipt getPrintReceiptObj() {
-        return null;
+        return new PrintReceipt1();
     }
 
     @Override
     public IPumpGasUnit getPumpGasUnitObj() {
-        return null;
+        return new PumpGasUnit1();
     }
 
     @Override
     public IReadyMsg getReadyMsgObj() {
-        return null;
+        return new ReadyMsg1();
     }
 
     @Override
     public IRejectMsg getRejectMsgObj() {
-        return null;
+        return new RejectMsg1();
     }
 
     @Override
     public IReturnCash getReturnCashObj() {
-        return null;
+        return new ReturnCash1();
     }
 
     @Override
     public ISetInitialValues getSetInitialValuesObj() {
-        return null;
+        return new SetInitialValues1();
     }
 
     @Override
     public ISetPrice getSetPriceObj() {
-        return null;
+        return new SetPrice1();
     }
 
     @Override
     public IStopMsg getStopMsgObj() {
-        return null;
+        return new StopMsg1();
     }
 
     @Override
     public IStoreCash getStoreCashObj() {
-        return null;
+        return new StoreCash1();
     }
 
     @Override
     public IStorePin getStorePinObj() {
-        return null;
+        return new StorePin1();
     }
 
     @Override
@@ -91,6 +98,6 @@ public class GasPump1Factory extends AFGasPump {
 
     @Override
     public IWrongPinMsg getWrongPinMsgObj() {
-        return null;
+        return new WrongPinMsg1();
     }
 }

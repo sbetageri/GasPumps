@@ -48,4 +48,57 @@ public class MetaModel {
     public void activate() {
         curState.StorePrices();
     }
+
+    public void Start() {
+        op.payMsg();
+        op.initializeData();
+    }
+
+    public void PayType(int t) {
+
+    }
+
+    public void Reject() {
+
+    }
+
+    public void Cancel()  {
+
+    }
+
+    public void Approved()  {
+
+    }
+
+    public void StartPump()  {
+
+    }
+
+    public void Pump() {
+
+    }
+
+    public void StopPump() {
+
+    }
+
+    public void SelectGas(int g) {
+
+    }
+
+    public void Receipt() {
+
+    }
+
+    public void NoReceipt() {
+
+    }
+
+    public void CorrectPin() {
+
+    }
+
+    public void IncorrectPin() {
+
+    }
 }

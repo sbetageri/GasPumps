@@ -1,16 +1,26 @@
 package pumps;
 
+import data.DataStore1;
 import pil.MetaModel;
+import state.State;
 
 public class GasPump1 {
     private MetaModel model;
+    DataStore1 dataStore;
 
     public GasPump1() {
         model = new MetaModel(MetaModel.GAS_PUMP_1);
+        dataStore = DataStore1.getInstance();
     }
 
     public void Activate(float a, float b) {
+        dataStore.setTempPrices(a, b);
         model.activate();
+    }
+
+    public void Start() {
+        model.Start();
+        model.changeState(State.STATE_1);
     }
 
     public void PayCredit() {
