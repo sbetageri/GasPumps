@@ -11,6 +11,13 @@ public class MetaModel {
     public static final int GAS_PUMP_1 = 1;
     public static final int GAS_PUMP_2 = 2;
 
+    public static final int PAY_TYPE_CREDIT = 1;
+    public static final int PAY_TYPE_CASH = 2;
+    public static final int PAY_TYPE_DEBIT = 3;
+
+    public static final int FUEL_TYPE_REGULAR = 1;
+    public static final int FUEL_TYPE_DIESEL = 4;
+
     OutputProcessor op;
     State[] states = new State[8];
     State curState;
@@ -46,59 +53,62 @@ public class MetaModel {
     }
 
     public void activate() {
-        curState.StorePrices();
+        curState.Activate();
     }
 
     public void Start() {
-        op.payMsg();
-        op.initializeData();
+        curState.Start();
     }
 
     public void PayType(int t) {
-
+        curState.PayType(t);
     }
 
     public void Reject() {
-
+        curState.Reject();
     }
 
     public void Cancel()  {
-
+        curState.Cancel();
     }
 
     public void Approved()  {
-
+        curState.Approved();
     }
 
     public void StartPump()  {
-
+        curState.StartPump();
     }
 
     public void Pump() {
-
+        curState.Pump();
     }
 
     public void StopPump() {
-
+        curState.StopPump();
     }
 
     public void SelectGas(int g) {
-
+        curState.SelectGas(g);
     }
 
     public void Receipt() {
-
+        curState.Reject();
     }
 
     public void NoReceipt() {
-
+        curState.NoReceipt();
     }
 
     public void CorrectPin() {
-
+        curState.CorrectPin();
     }
 
     public void IncorrectPin() {
+        curState.IncorrectPin();
+    }
 
+    public void Continue() {
+        curState.Continue();
     }
 }

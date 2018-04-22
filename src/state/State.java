@@ -24,76 +24,63 @@ public abstract class State {
         this.op = op;
     }
 
-    public void CancelMsg() {
-        System.out.println("Not an allowed action");
+    public void Activate() {
+        System.out.println("Action not allowed");
     }
 
-    public void DisplayMenu() {
-        System.out.println("Not an allowed action");
+    public void Start() {
+        System.out.println("Action not allowed");
     }
 
-    public void WrongPinMsg() {
-        System.out.println("Not an allowed action");
+    public void PayType(int t) {
+        System.out.println("Action not allowed");
     }
 
-    public void StorePrices() {
-        System.out.println("Not an allowed action");
+    public void Reject() {
+        System.out.println("Action not allowed");
     }
 
-    public void StorePin() {
-        System.out.println("Not an allowed action");
+    public void Cancel() {
+        System.out.println("Action not allowed");
     }
 
-    public void StoreCash() {
-        System.out.println("Not an allowed action");
+    public void Approved() {
+        System.out.println("Action not allowed");
     }
 
-    public void StopMsg() {
-        System.out.println("Not an allowed action");
+    public void StartPump() {
+        System.out.println("Action not allowed");
     }
 
-    public void SetPrice() {
-        System.out.println("Not an allowed action");
+    public void Pump() {
+        System.out.println("Action not allowed");
     }
 
-    public void SetInitialValues() {
-        System.out.println("Not an allowed action");
+    public void StopPump() {
+        System.out.println("Action not allowed");
     }
 
-    public void ReturnCash() {
-        System.out.println("Not an allowed action");
+    public void SelectGas(int g) {
+        System.out.println("Action not allowed");
     }
 
-    public void RejectMsg() {
-        System.out.println("Not an allowed action");
+    public void Receipt() {
+        System.out.println("Action not allowed");
     }
 
-    public void ReadyMsg() {
-        System.out.println("Not an allowed action");
+    public void NoReceipt() {
+        System.out.println("Action not allowed");
     }
 
-    public void PumpGasUnit() {
-        System.out.println("Not an allowed action");
+    public void CorrectPin() {
+        System.out.println("Action not allowed");
     }
 
-    public void PrintReceipt() {
-        System.out.println("Not an allowed action");
+    public void IncorrectPin() {
+        System.out.println("Action not allowed");
     }
 
-    public void PayMsg() {
-        System.out.println("Not an allowed action");
+    public void Continue() {
+        System.out.println("Action not allowed");
     }
-
-    public void InitializeData() {
-        System.out.println("Not an allowed action");
-    }
-
-    public void GasPumpedMsg() {
-        System.out.println("Not an allowed action");
-    }
-
-    public void EnterPinMsg() {
-        System.out.println("Not an allowed action");
-    }
-
 }

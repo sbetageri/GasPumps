@@ -20,13 +20,14 @@ public class OutputProcessor {
     ISetPrice setPrice;
     IStopMsg stopMsg;
     IStoreCash storeCash;
+    IStorePin storePin;
     IStorePrices storePrices;
     IWrongPinMsg wrongPinMsg;
 
     AFGasPump gasPump;
     IDataStore dataStore;
 
-    int m = 0;
+    public int m = 0;
 
     public OutputProcessor(AFGasPump concreteGasPump) {
         gasPump = concreteGasPump;
@@ -63,7 +64,6 @@ public class OutputProcessor {
     }
 
     public void initializeData() {
-        m = 1;
         initializeData = gasPump.getInitializeDataObj();
         initializeData.InitializeData(dataStore);
     }
@@ -116,5 +116,10 @@ public class OutputProcessor {
     public void wrongPinMsg() {
         wrongPinMsg = gasPump.getWrongPinMsgObj();
         wrongPinMsg.WrongPinMsg();
+    }
+
+    public void storePin() {
+        storePin = gasPump.getStorePinObj();
+        storePin.StorePin();
     }
 }

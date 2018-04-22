@@ -2,7 +2,6 @@ package pumps;
 
 import data.DataStore1;
 import pil.MetaModel;
-import state.State;
 
 public class GasPump1 {
     private MetaModel model;
@@ -20,50 +19,57 @@ public class GasPump1 {
 
     public void Start() {
         model.Start();
-        model.changeState(State.STATE_1);
     }
 
     public void PayCredit() {
-
+        model.PayType(MetaModel.PAY_TYPE_CREDIT);
     }
 
     public void Reject() {
-
+        model.Reject();
     }
 
     public void PayDebit(String p) {
-
+        dataStore.temp_p = p;
+        model.PayType(MetaModel.PAY_TYPE_DEBIT);
     }
 
     public void Cancel() {
-
+        model.Cancel();
     }
 
     public void Approved() {
-
+        model.Approved();
     }
 
     public void Diesel() {
-
+        model.SelectGas(MetaModel.FUEL_TYPE_DIESEL);
     }
 
     public void Regular() {
-
+        model.SelectGas(MetaModel.FUEL_TYPE_REGULAR);
     }
 
     public void StartPump() {
-
+        if (dataStore.price > 0) {
+            model.Continue();
+            model.StartPump();
+        }
     }
 
     public void PumpGallon() {
-
+        model.Pump();
     }
 
     public void StopPump() {
-
+        model.StopPump();
     }
 
     public void FullTank() {
+        model.StopPump();
+        model.Receipt();
+    }
 
+    public void Pin() {
     }
 }

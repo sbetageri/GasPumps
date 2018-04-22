@@ -1,8 +1,14 @@
 package factory;
 
+import data.IDataStore;
 import op.actions.*;
 
 public class GasPump2Factory extends AFGasPump {
+
+    @Override
+    public IDataStore getDataStoreObj() {
+        return null;
+    }
 
     @Override
     public ICancelMsg getCancelMsgObj() {

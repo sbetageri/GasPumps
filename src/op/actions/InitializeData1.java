@@ -7,6 +7,5 @@ public class InitializeData1 implements IInitializeData {
 
     @Override
     public void InitializeData(IDataStore dataStore) {
-        dataStore.price = 0;
     }
 }

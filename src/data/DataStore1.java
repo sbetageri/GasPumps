@@ -5,7 +5,7 @@ public class DataStore1 extends IDataStore {
 
     float temp_a;
     float temp_b;
-    String temp_p;
+    public String temp_p;
     String pin;
     public float price;
     int G;
