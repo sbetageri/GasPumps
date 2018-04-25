@@ -16,7 +16,7 @@ public class S0 extends State {
 
     @Override
     public void Start() {
-        model.m = 1;
+        model.m = MetaModel.PAYMENT_CREDIT;
         op.payMsg();
         op.initializeData();
         model.changeState(State.STATE_1);

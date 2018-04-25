@@ -4,6 +4,6 @@ public class DisplayMenu1 implements IDisplayMenu {
 
     @Override
     public void DisplayMenu() {
-        System.out.println("Displaying menu");
+        System.out.println("Select either Diesel or Regular fuel");
     }
 }

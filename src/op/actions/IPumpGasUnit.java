@@ -1,7 +1,9 @@
 package op.actions;
 
+import data.IDataStore;
+
 public interface IPumpGasUnit {
 
-    void PumpGasUnit();
+    void PumpGasUnit(IDataStore iDataStore);
 
 }

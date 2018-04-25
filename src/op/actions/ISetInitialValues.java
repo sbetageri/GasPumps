@@ -1,7 +1,9 @@
 package op.actions;
 
+import data.IDataStore;
+
 public interface ISetInitialValues {
 
-    void SetInitialValues();
+    void SetInitialValues(IDataStore iDataStore);
 
 }

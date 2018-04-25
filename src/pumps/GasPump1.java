@@ -13,8 +13,11 @@ public class GasPump1 {
     }
 
     public void Activate(float a, float b) {
-        dataStore.setTempPrices(a, b);
-        model.activate();
+        if (a > 0 && b > 0) {
+            dataStore.temp_a = a;
+            dataStore.temp_b = b;
+            model.activate();
+        }
     }
 
     public void Start() {
@@ -70,6 +73,11 @@ public class GasPump1 {
         model.Receipt();
     }
 
-    public void Pin() {
+    public void Pin(String x) {
+        if (dataStore.pin.equals(x)) {
+            model.CorrectPin();
+        } else {
+            model.IncorrectPin();
+        }
     }
 }

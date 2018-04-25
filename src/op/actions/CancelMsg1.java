@@ -4,6 +4,6 @@ public class CancelMsg1 implements ICancelMsg {
 
     @Override
     public void CancelMsg() {
-        System.out.println("Canceling message1");
+        System.out.println("Transaction in Gas Pump1 has been cancelled");
     }
 }

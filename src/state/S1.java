@@ -17,7 +17,7 @@ public class S1 extends State {
         } else if (t == MetaModel.PAY_TYPE_CASH) {
             op.storeCash();
             op.displayMenu();
-            model.m = 0;
+            model.m = MetaModel.PAYMENT_CASH;
             model.changeState(STATE_3);
 
         } else if (t == MetaModel.PAY_TYPE_DEBIT) {

@@ -1,9 +1,14 @@
 package op.actions;
 
-public class StorePrices1 implements IStorePrices {
+import data.DataStore1;
+import data.IDataStore;
 
-    @Override
-    public void StorePrices() {
-        System.out.println("Storing prices");
+public class StorePrices1 implements IStorePrices {
+    DataStore1 dataStore;
+
+    public void StorePrices(IDataStore storeData) {
+        dataStore = (DataStore1) storeData;
+        dataStore.RPrice = dataStore.temp_a;
+        dataStore.DPrice = dataStore.temp_b;
     }
 }

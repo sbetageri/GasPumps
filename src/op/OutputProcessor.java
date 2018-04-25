@@ -39,7 +39,7 @@ public class OutputProcessor {
 
     public void storePrices() {
         storePrices = gasPump.getStorePricesObj();
-        storePrices.StorePrices();
+        storePrices.StorePrices(dataStore);
     }
 
     public void payMsg() {
@@ -58,7 +58,7 @@ public class OutputProcessor {
 
     public void gasPumpedMsg() {
         gasPumpedMsg = gasPump.getGasPumpedMsgObj();
-        gasPumpedMsg.GasPumpedMsg();
+        gasPumpedMsg.GasPumpedMsg(dataStore);
     }
 
     public void initializeData() {
@@ -68,12 +68,12 @@ public class OutputProcessor {
 
     public void printReceipt() {
         printReceipt = gasPump.getPrintReceiptObj();
-        printReceipt.PrintReceipt();
+        printReceipt.PrintReceipt(dataStore);
     }
 
     public void pumpGasUnit() {
         pumpGasUnit = gasPump.getPumpGasUnitObj();
-        pumpGasUnit.PumpGasUnit();
+        pumpGasUnit.PumpGasUnit(dataStore);
     }
 
     public void readyMsg() {
@@ -88,17 +88,18 @@ public class OutputProcessor {
 
     public void returnCash() {
         returnCash = gasPump.getReturnCashObj();
-        returnCash.ReturnCash();
+        returnCash.ReturnCash(dataStore);
     }
 
     public void setInitialValues() {
         setInitialValues = gasPump.getSetInitialValuesObj();
-        setInitialValues.SetInitialValues();
+        setInitialValues.SetInitialValues(dataStore);
     }
 
     public void setPrice(int g, int m) {
         setPrice = gasPump.getSetPriceObj();
-        setPrice.SetPrice();
+        setPrice.setDataStore(dataStore);
+        setPrice.SetPrice(g, m);
     }
 
     public void stopMsg() {
@@ -108,7 +109,7 @@ public class OutputProcessor {
 
     public void storeCash() {
         storeCash = gasPump.getStoreCashObj();
-        storeCash.StoreCash();
+        storeCash.StoreCash(dataStore);
     }
 
     public void wrongPinMsg() {
@@ -118,6 +119,6 @@ public class OutputProcessor {
 
     public void storePin() {
         storePin = gasPump.getStorePinObj();
-        storePin.StorePin();
+        storePin.StorePin(dataStore);
     }
 }

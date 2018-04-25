@@ -1,7 +1,9 @@
 package op.actions;
 
+import data.IDataStore;
+
 public interface IGasPumpedMsg {
 
-    void GasPumpedMsg();
+    void GasPumpedMsg(IDataStore iDataStore);
 
 }

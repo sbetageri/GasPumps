@@ -16,7 +16,12 @@ public class MetaModel {
     public static final int PAY_TYPE_DEBIT = 3;
 
     public static final int FUEL_TYPE_REGULAR = 1;
+    public static final int FUEL_TYPE_SUPER = 2;
+    public static final int FUEL_TYPE_PREMIUM = 3;
     public static final int FUEL_TYPE_DIESEL = 4;
+
+    public static final int PAYMENT_CASH = 0;
+    public static final int PAYMENT_CREDIT = 1;
 
     OutputProcessor op;
     State[] states = new State[8];

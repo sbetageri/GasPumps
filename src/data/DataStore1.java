@@ -3,15 +3,19 @@ package data;
 public class DataStore1 extends IDataStore {
     private static DataStore1 dataStore;
 
-    float temp_a;
-    float temp_b;
+    public float temp_a;
+    public float temp_b;
     public String temp_p;
-    String pin;
+    public String pin;
     public float price;
-    int G;
-    float total;
-    float RPrice;
-    float DPrice;
+    public int G;
+    public float total;
+    public float RPrice;
+    public float DPrice;
+
+    private DataStore1() {
+
+    }
 
     public static DataStore1 getInstance() {
         if (dataStore == null) {
@@ -19,15 +23,4 @@ public class DataStore1 extends IDataStore {
         }
         return dataStore;
     }
-
-    public void setTempPrices(float a, float b) {
-        temp_a = a;
-        temp_b = b;
-    }
-
-    public void StorePrices() {
-       RPrice = temp_a;
-       DPrice = temp_b;
-    }
-
 }

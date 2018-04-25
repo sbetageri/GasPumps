@@ -1,7 +1,9 @@
 package op.actions;
 
+import data.IDataStore;
+
 public interface IPrintReceipt {
 
-    void PrintReceipt();
+    void PrintReceipt(IDataStore iDataStore);
 
 }

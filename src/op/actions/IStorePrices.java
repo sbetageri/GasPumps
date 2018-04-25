@@ -1,7 +1,9 @@
 package op.actions;
 
+import data.IDataStore;
+
 public interface IStorePrices {
 
-    void StorePrices();
+    void StorePrices(IDataStore dataStore);
 
 }
