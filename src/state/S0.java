@@ -19,6 +19,7 @@ public class S0 extends State {
         model.m = MetaModel.PAYMENT_CREDIT;
         op.payMsg();
         op.initializeData();
+        System.out.println("Starting");
         model.changeState(State.STATE_1);
     }
 

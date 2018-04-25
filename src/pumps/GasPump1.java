@@ -25,6 +25,7 @@ public class GasPump1 {
     }
 
     public void PayCredit() {
+        System.out.println("Credit");
         model.PayType(MetaModel.PAY_TYPE_CREDIT);
     }
 
@@ -33,6 +34,7 @@ public class GasPump1 {
     }
 
     public void PayDebit(String p) {
+        System.out.println("Debit");
         dataStore.temp_p = p;
         model.PayType(MetaModel.PAY_TYPE_DEBIT);
     }
@@ -66,6 +68,7 @@ public class GasPump1 {
 
     public void StopPump() {
         model.StopPump();
+        model.Receipt();
     }
 
     public void FullTank() {

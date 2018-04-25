@@ -47,6 +47,7 @@ public class OutputProcessor {
     }
 
     public void displayMenu() {
+        System.out.println("Disp Menu");
         displayMenu = gasPump.getDisplayMenuObj();
         displayMenu.DisplayMenu();
     }

@@ -24,21 +24,21 @@ public class MetaModel {
     public static final int PAYMENT_CREDIT = 1;
 
     OutputProcessor op;
-    State[] states = new State[8];
+    State[] states = new State[9];
     State curState;
 
     public int m = 0;
 
     public MetaModel(int gp) {
         AFGasPump gasPump;
-        if (gp == 1) {
+        if (gp == GAS_PUMP_1) {
             gasPump = new GasPump1Factory();
         } else {
             gasPump = new GasPump2Factory();
         }
         op = new OutputProcessor(gasPump);
         initializeStates();
-        curState = states[0];
+        curState = states[8];
     }
 
     private void initializeStates() {
@@ -50,12 +50,14 @@ public class MetaModel {
         states[5] = new S5(this, op);
         states[6] = new S6(this, op);
         states[7] = new S8(this, op);
+        states[8] = new StartState(this, op);
     }
 
     public void changeState(int newState) {
         if (newState >= State.MIN_STATE_LEVEL &&
                 newState <= State.MAX_STATE_LEVEL) {
             curState = states[newState];
+            System.out.println("Currently in State : " + newState);
         }
     }
 
@@ -97,10 +99,11 @@ public class MetaModel {
 
     public void SelectGas(int g) {
         curState.SelectGas(g);
+        curState.Continue();
     }
 
     public void Receipt() {
-        curState.Reject();
+        curState.Receipt();
     }
 
     public void NoReceipt() {

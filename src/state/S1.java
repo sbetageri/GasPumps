@@ -11,6 +11,7 @@ public class S1 extends State {
 
     @Override
     public void PayType(int t) {
+        System.out.println("Paytype");
         if (t == MetaModel.PAY_TYPE_CREDIT) {
             model.changeState(STATE_2);
 

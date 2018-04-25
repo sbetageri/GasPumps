@@ -10,5 +10,7 @@ public class PumpGasUnit2 implements IPumpGasUnit {
         DataStore2 dataStore = (DataStore2) iDataStore;
         dataStore.L += 1;
         dataStore.total = dataStore.price * dataStore.L;
+        System.out.println("Pumped : " + dataStore.L);
+        System.out.println("Price : " + dataStore.total);
     }
 }

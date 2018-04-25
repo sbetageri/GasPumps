@@ -21,7 +21,7 @@ public class DataStore2 extends IDataStore{
 
     public static DataStore2 getInstance() {
         if (dataStore == null) {
-            return new DataStore2();
+            dataStore = new DataStore2();
         }
         return dataStore;
     }

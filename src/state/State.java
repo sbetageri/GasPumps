@@ -18,6 +18,7 @@ public abstract class State {
     public static final int STATE_5 = 5;
     public static final int STATE_6 = 6;
     public static final int STATE_7 = 7;
+    public static final int STATE_START = 8;
 
     public State(MetaModel model, OutputProcessor op) {
         this.model = model;
@@ -25,62 +26,62 @@ public abstract class State {
     }
 
     public void Activate() {
-        System.out.println("Action not allowed");
+        System.out.println("Activation not allowed");
     }
 
     public void Start() {
-        System.out.println("Action not allowed");
+        System.out.println("Starting not allowed");
     }
 
     public void PayType(int t) {
-        System.out.println("Action not allowed");
+        System.out.println("PayType not allowed");
     }
 
     public void Reject() {
-        System.out.println("Action not allowed");
+        System.out.println("Reject not allowed");
     }
 
     public void Cancel() {
-        System.out.println("Action not allowed");
+        System.out.println("Cancel not allowed");
     }
 
     public void Approved() {
-        System.out.println("Action not allowed");
+        System.out.println("Approved not allowed");
     }
 
     public void StartPump() {
-        System.out.println("Action not allowed");
+        System.out.println("StartPump not allowed");
     }
 
     public void Pump() {
-        System.out.println("Action not allowed");
+        System.out.println("Pump not allowed");
     }
 
     public void StopPump() {
-        System.out.println("Action not allowed");
+        System.out.println("StopPump not allowed");
     }
 
     public void SelectGas(int g) {
-        System.out.println("Action not allowed");
+        System.out.println("Select Gas not allowed");
     }
 
     public void Receipt() {
-        System.out.println("Action not allowed");
+        System.out.println("Receipt not allowed");
     }
 
     public void NoReceipt() {
-        System.out.println("Action not allowed");
+        System.out.println("NoReceipt not allowed");
     }
 
     public void CorrectPin() {
-        System.out.println("Action not allowed");
+        System.out.println("CorrectPin not allowed");
     }
 
     public void IncorrectPin() {
-        System.out.println("Action not allowed");
+        System.out.println("Incorrect pin not allowed");
     }
 
     public void Continue() {
-        System.out.println("Action not allowed");
+        System.out.println("Continue not allowed");
     }
 }
